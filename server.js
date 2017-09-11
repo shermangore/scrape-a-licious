@@ -25,7 +25,9 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/scrapealicious");
+var MONGODB_URI = "mongodb://heroku_6f61xm71:9r2p7m5vg047locjd21gbvrhm6@ds129394.mlab.com:29394/heroku_6f61xm71";
+//mongoose.connect("mongodb://localhost/scrapealicious");
+mongoose.connect(process.env.MONGODB_URI);
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -159,6 +161,6 @@ app.post("/articles/:id", function (req, res) {
 });
 
 // Listen on port 3000
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("App running on port 3000!");
 });
