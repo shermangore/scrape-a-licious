@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Job Scraper</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css" media="screen" title="no title">
+</head>
+
+<body>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>Job Scraper</h1>
+      <h2><i>Get Job Listings from the comfort of your own couch!</i></h2>
+    </div>
+  </div>
+  <div id="container">
+    <div class="form">
+      <div class="row">
+        <div class="col-lg-5 form-group">
+          <input type="text" id="jobtitle" class="form-control" placeholder="Enter a job key word">
+        </div>
+        <div class="col-lg-3">
+          <select name="dd-city" id="dd-city" class="form-control">
+                <option value="">Select a city</option>
+                <option value="LAX">Los Angeles, CA</option>
+                <option value="SFO">San Francisco, CA</option>
+                <option value="MCO">Chicago, IL</option>
+                <option value="SAN">San Diego, CA</option>
+                <option value="LGA">New York, NY</option>
+                <option value="AUS">Austin, TX</option>
+              </select>
+        </div>
+        <div class="col-lg-4">
+          <button type="submit" class="btn btn-success" id="btn-submit">Get jobs</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div id="articles" class="panel-body"></div>
+      <div id="notes" class="panel-body"></div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
